@@ -8,33 +8,52 @@ This project was developed to demonstrate automated detection and mitigation of 
 
 The application scans authentication logs, identifies repeated failed login attempts and automatically blocks malicious IP addresses using the UFW firewall.
 
+
 ## Features
 
 - Detects failed SSH login attempts from `/var/log/auth.log`
-- Extracts source IP addresses using Regular Expressions
+- Extracts source IP addresses using Regular Expressions (Regex)
 - Counts failed login attempts for each IP address
 - Automatically blocks IP addresses after a configurable threshold
 - Prevents duplicate firewall rules by checking previously blocked IPs
 - Logs blocked IP addresses with timestamps
 
+
+
 ## Technologies
 
 - Python 3
-- Linux (Ubuntu)
+- Ubuntu Linux
 - UFW Firewall
 - Regular Expressions (Regex)
-- VirtualBox
+
+### Development Environment
+
+- Oracle VirtualBox
+
+
+
+## Skills Demonstrated
+
+- Python scripting
+- Linux system administration
+- Log analysis
+- Regular Expressions (Regex)
+- Firewall automation
+- Basic cybersecurity concepts
+
+
 
 ## How it Works
 
-```
+```text
 SSH Login Attempt
         │
         ▼
 /var/log/auth.log
         │
         ▼
-Python Script
+Python Detection Script
         │
         ├── Parse log entries
         ├── Count failed attempts
@@ -47,6 +66,8 @@ UFW Firewall
         ▼
 blocked_ips.log
 ```
+
+
 
 ## Installation
 
@@ -62,15 +83,17 @@ Go to the project directory:
 cd ssh-bruteforce-detector
 ```
 
+---
+
+## Usage
+
 Run the script:
 
 ```bash
 sudo python3 detect_and_block.py
 ```
 
-## Example
 
-When an IP address exceeds the configured threshold, the script blocks it using UFW and records the action in `blocked_ips.log`.
 
 ## Demo
 
@@ -86,13 +109,17 @@ Blocked IP addresses are recorded with timestamps in `blocked_ips.log` for audit
 
 ![Blocked IP Log](screenshots/blocked-ips-log.png)
 
+
+
 ## Future Improvements
 
 - Real-time log monitoring
 - Email notifications
 - Automatic IP unblocking after a configurable time
-- Configuration file support
+- Configurable threshold through a configuration file
 - Docker support
+
+
 
 ## Author
 
