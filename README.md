@@ -74,6 +74,12 @@ When an IP address exceeds the configured threshold, the script blocks it using 
 - Configuration file support
 - Docker support
 
+## Project Overview
+
+This project was developed to demonstrate automated detection and mitigation of SSH brute-force attacks on Linux systems.
+
+The application scans authentication logs, identifies repeated failed login attempts and automatically blocks malicious IP addresses using the UFW firewall.
+
 ## Author
 
 Peter Mitev
