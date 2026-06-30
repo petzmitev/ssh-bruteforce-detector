@@ -72,6 +72,20 @@ sudo python3 detect_and_block.py
 
 When an IP address exceeds the configured threshold, the script blocks it using UFW and records the action in `blocked_ips.log`.
 
+## Demo
+
+### Script Execution
+
+The example below demonstrates the script scanning Linux authentication logs and automatically blocking IP addresses that exceeded the configured threshold.
+
+![Script Execution](screenshots/terminal-demo.png)
+
+### Blocked IP Log
+
+Blocked IP addresses are recorded with timestamps in `blocked_ips.log` for auditing purposes.
+
+![Blocked IP Log](screenshots/blocked-ips-log.png)
+
 ## Future Improvements
 
 - Real-time log monitoring
