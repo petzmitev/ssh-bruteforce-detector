@@ -2,6 +2,12 @@
 
 A Python-based security tool that detects SSH brute-force attacks by analyzing Linux authentication logs and automatically blocks malicious IP addresses using UFW.
 
+## Project Overview
+
+This project was developed to demonstrate automated detection and mitigation of SSH brute-force attacks on Linux systems.
+
+The application scans authentication logs, identifies repeated failed login attempts and automatically blocks malicious IP addresses using the UFW firewall.
+
 ## Features
 
 - Detects failed SSH login attempts from `/var/log/auth.log`
@@ -73,12 +79,6 @@ When an IP address exceeds the configured threshold, the script blocks it using 
 - Automatic IP unblocking after a configurable time
 - Configuration file support
 - Docker support
-
-## Project Overview
-
-This project was developed to demonstrate automated detection and mitigation of SSH brute-force attacks on Linux systems.
-
-The application scans authentication logs, identifies repeated failed login attempts and automatically blocks malicious IP addresses using the UFW firewall.
 
 ## Author
 
